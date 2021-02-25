@@ -68,10 +68,10 @@ $str = file_get_contents("http://namegenerators.org/fake-name-generator-us/");
 $var = '/<div class="col2">(.*?)<\/div>/s';
 preg_match_all($var, $str, $matches);
 echo $green . "\n $$$$$$$$$$$$$$$ CARD INFORMATION $$$$$$$$$$$$$$$\n";
-echo $bold . $cyan . "[email : ".$matches[1][10]."]".
-" [str_replace(" ", "", $matches[1][14])."]".
-" [$matches[1][16]."]".
-" [$matches[1][15]."]\n";
+echo $bold . $cyan . "[".$matches[1][10]."]".
+"["str_replace(" ", "", $matches[1][14])."]".
+"["$matches[1][16]."]".
+"["$matches[1][15]."]\n";
 
 echo $red . "Go To This WEB To Test The Card https://cc-checker.com/checker-cc/";
 	sleep($sleep);
